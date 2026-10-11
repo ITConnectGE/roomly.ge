@@ -28,10 +28,13 @@
         <img src="assets/roomly-logo.svg" alt="Roomly" style="height: 40px; width: auto">
       </a>
       <nav aria-label="მთავარი მენიუ" style="display: flex; flex-wrap: wrap; gap: 4px; font-size: 14px">
-        <a href="index.html" style="color: #4A4843; text-decoration: none; padding: 8px 12px">მთავარი</a>
-        <a href="team.html" style="color: #1C1C1E; font-weight: 600; text-decoration: none; padding: 8px 12px; border-bottom: 2px solid #B81D24">ჩვენი გუნდი</a>
+        <a href="index.html#sync" style="color: #4A4843; text-decoration: none; padding: 8px 12px">არხები</a>
+        <a href="index.html#product" style="color: #4A4843; text-decoration: none; padding: 8px 12px">პროდუქტი</a>
+        <a href="index.html#ai" style="color: #4A4843; text-decoration: none; padding: 8px 12px">AI</a>
+        <a href="index.html#apps" style="color: #4A4843; text-decoration: none; padding: 8px 12px">აპები</a>
+        <a href="team.html" aria-current="page" style="color: #1C1C1E; font-weight: 600; text-decoration: none; padding: 8px 12px; border-bottom: 2px solid #B81D24">ჩვენი გუნდი</a>
       </nav>
-      <a href="mailto:info@roomly.ge" style="margin-left: auto; display: inline-flex; align-items: center; height: 44px; padding: 0 18px; border-radius: 8px; background: #B81D24; color: #fff; text-decoration: none; font-size: 14px; font-weight: 600">დაგვიკავშირდით</a>
+      <a href="index.html#contact" style="margin-left: auto; display: inline-flex; align-items: center; height: 44px; padding: 0 18px; border-radius: 8px; background: #B81D24; color: #fff; text-decoration: none; font-size: 14px; font-weight: 600">დემოს მოთხოვნა</a>
     </div>
   </header>
 
@@ -96,10 +99,25 @@
     </section>
   </main>
 
-  <footer style="background: #1C1C1E; color: #8A867E; border-top: 1px solid #2C2C2E; padding: 24px 0; font-size: 13px">
-    <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 32px); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px">
-      <span>© 2026 Roomly</span>
-      <a href="https://itconnect.ge" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 10px; color: #8A867E; text-decoration: none">პროექტის შემქმნელი<img src="assets/itconnect-logo.png" alt="ITConnect" style="height: 22px; width: auto; border-radius: 3px"></a>
+  <footer style="background: #1C1C1E; color: #B4B0A8; border-top: 1px solid #2C2C2E; padding: 56px 0 28px; font-size: 14px">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 32px); display: flex; flex-direction: column; gap: 40px">
+      <div style="display: flex; flex-wrap: wrap; gap: 40px">
+        <div style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 14px">
+          <a href="index.html" aria-label="Roomly" style="display: flex; align-items: center; gap: 12px; color: #fff; text-decoration: none"><img src="assets/roomly-logo-light.svg" alt="Roomly" style="height: 48px; width: auto"></a>
+          <span style="max-width: 260px; line-height: 1.5">PMS, Channel Manager და AI — სასტუმროებისა და აპარტამენტებისთვის.</span>
+        </div>
+        <div style="flex: 1 1 240px; display: flex; flex-direction: column; gap: 10px">
+          <b style="color: #fff; font-size: 15px">კონტაქტი</b>
+          <a href="mailto:info@roomly.ge" style="color: #D6D3CD; text-decoration: none">info@roomly.ge</a>
+          <a href="tel:+995322441111" style="color: #D6D3CD; text-decoration: none">032 2 44 11 11</a>
+          <span style="line-height: 1.5">ჭავჭავაძის გამზირი 37მ, მე-5 სართული, თბილისი</span>
+        </div>
+        <div style="flex: 1.4 1 320px; height: 220px; border-radius: 12px; overflow: hidden; border: 1px solid #3A3A3C"><iframe title="რუკა — ჭავჭავაძის გამზირი 37მ" src="https://www.google.com/maps?q=%E1%83%AD%E1%83%90%E1%83%95%E1%83%AD%E1%83%90%E1%83%95%E1%83%90%E1%83%AB%E1%83%98%E1%83%A1%20%E1%83%92%E1%83%90%E1%83%9B%E1%83%96%E1%83%98%E1%83%A0%E1%83%98%2037%E1%83%9B%2C%20%E1%83%97%E1%83%91%E1%83%98%E1%83%9A%E1%83%98%E1%83%A1%E1%83%98&amp;z=16&amp;output=embed" width="100%" height="100%" style="border: 0; display: block" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; border-top: 1px solid #2C2C2E; padding-top: 20px; font-size: 13px; color: #8A867E">
+        <span>© 2026 Roomly</span>
+        <a href="https://itconnect.ge" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 10px; color: #8A867E; text-decoration: none">პროექტის შემქმნელი<img src="assets/itconnect-logo.png" alt="ITConnect" style="height: 22px; width: auto; border-radius: 3px"></a>
+      </div>
     </div>
   </footer>
 
