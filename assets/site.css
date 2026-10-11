@@ -1,0 +1,27 @@
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: #F6F5F3; }
+*, *::before, *::after { box-sizing: border-box; }
+img { max-width: 100%; }
+a { color: #B81D24; }
+a:hover { color: #8E151B; }
+:focus-visible { outline: 3px solid #B81D24; outline-offset: 2px; }
+
+.flow { stroke-dasharray: 6 10; animation: flow 1.8s linear infinite; }
+@keyframes flow { to { stroke-dashoffset: -32; } }
+
+[data-node] { cursor: grab; touch-action: none; user-select: none; -webkit-user-select: none; }
+[data-node].dragging { cursor: grabbing; }
+[role="tab"] { transition: background .15s, color .15s, border-color .15s; }
+
+@media (max-width: 960px) {
+  .hero-phone { display: none; }
+}
+@media (max-width: 720px) {
+  h1 { font-size: 34px !important; }
+  h2 { font-size: 28px !important; }
+  section { padding-top: 56px !important; padding-bottom: 56px !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .flow { animation: none; }
+}

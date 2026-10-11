@@ -3,413 +3,274 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Roomly — AI-ზე დაფუძნებული PMS სასტუმროებისთვის</title>
-<meta name="description" content="Roomly — ციფრული PMS სასტუმროებისთვის, აპარტჰოტელებისთვის, აპარტამენტებისა და საოჯახო სასტუმროებისთვის. ჩაშენებული AI რესეფშენი, AI კონსიერჟი და AI გაყიდვების აგენტები.">
-<meta name="theme-color" content="#1C1C1E">
+<title>Roomly — PMS, Channel Manager და AI</title>
+<meta name="description" content="Roomly — PMS, Channel Manager და AI ერთ სისტემაში: სასტუმროებისთვის, აპარტჰოტელებისთვის, აპარტამენტებისა და გესთ ჰაუსებისთვის.">
+<meta name="theme-color" content="#F6F5F3">
 <link rel="canonical" href="https://roomly.ge/">
-<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="icon" href="assets/roomly-mark.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://roomly.ge/">
-<meta property="og:title" content="Roomly — AI-ზე დაფუძნებული PMS">
-<meta property="og:description" content="სასტუმროს მართვა, სადაც რესეფშენი, კონსიერჟი და გაყიდვები AI-ზე მუშაობს.">
+<meta property="og:title" content="Roomly — PMS, Channel Manager და AI">
+<meta property="og:description" content="Roomly — PMS, Channel Manager და AI ერთ სისტემაში: სასტუმროებისთვის, აპარტჰოტელებისთვის, აპარტამენტებისა და გესთ ჰაუსებისთვის.">
+<meta property="og:image" content="https://roomly.ge/assets/screens/dashboard.png">
 <meta property="og:locale" content="ka_GE">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/styles.css">
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
+<div style="font-family: 'Noto Sans Georgian', system-ui, sans-serif; color: #1C1C1E; background: #F6F5F3; line-height: 1.55; font-size: 16px">
 
-<header class="site-header">
-  <div class="container">
-    <a class="brand" href="#top" aria-label="Roomly — მთავარი">
-      <img class="brand-mark" src="assets/logo.svg" alt="" width="32" height="32">
-      <span class="brand-name">roomly<span>.ge</span></span>
-    </a>
-    <nav class="nav" aria-label="მთავარი მენიუ">
-      <a href="#ai">AI გუნდი</a>
-      <a href="#types">ვისთვის</a>
-      <a href="#modules">მოდულები</a>
-      <a href="#apps">მობილური აპები</a>
-      <a href="#integrations">ინტეგრაციები</a>
-    </nav>
-    <div class="header-cta">
-      <a class="btn btn-primary btn-sm" href="#contact">დემოს მოთხოვნა</a>
+  <header style="background: #F6F5F3; color: #1C1C1E">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 10px clamp(16px, 4vw, 32px); min-height: 64px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px">
+      <a href="#top" style="display: flex; align-items: center; gap: 10px; color: #1C1C1E; text-decoration: none">
+        <img src="assets/roomly-logo.svg" alt="Roomly" style="height: 40px; width: auto">
+      </a>
+      <nav aria-label="მთავარი მენიუ" style="display: flex; flex-wrap: wrap; gap: 4px; font-size: 14px">
+        <a href="#sync" style="color: #4A4843; text-decoration: none; padding: 8px 12px">არხები</a>
+        <a href="#product" style="color: #4A4843; text-decoration: none; padding: 8px 12px">პროდუქტი</a>
+        <a href="#ai" style="color: #4A4843; text-decoration: none; padding: 8px 12px">AI</a>
+        <a href="#apps" style="color: #4A4843; text-decoration: none; padding: 8px 12px">აპები</a>
+        <a href="team.html" style="color: #4A4843; text-decoration: none; padding: 8px 12px">ჩვენი გუნდი</a>
+      </nav>
+      <a href="#contact" style="margin-left: auto; display: inline-flex; align-items: center; height: 44px; padding: 0 18px; border-radius: 8px; background: #B81D24; color: #fff; text-decoration: none; font-size: 14px; font-weight: 600">დემოს მოთხოვნა</a>
     </div>
-  </div>
-</header>
+  </header>
 
-<main id="top">
+  <main id="top">
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container">
-      <div>
-        <span class="eyebrow"><span class="dot" aria-hidden="true"></span>PMS, რომელშიც AI ჩაშენებულია და არა მიმაგრებული</span>
-        <h1>სასტუმრო, რომელიც <em>თავად პასუხობს</em>, ყიდის და ზრუნავს სტუმარზე</h1>
-        <p class="lead">Roomly არის ციფრული PMS სასტუმროებისთვის, აპარტჰოტელებისთვის, აპარტამენტებისა და საოჯახო სასტუმროებისთვის. AI რესეფშენი, AI კონსიერჟი და AI გაყიდვების აგენტები მუშაობენ 24/7 — თქვენი გუნდი კი მხოლოდ იქ ერთვება, სადაც ადამიანია საჭირო.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#contact">დემოს მოთხოვნა</a>
-          <a class="btn btn-ghost" href="#ai">როგორ მუშაობს AI</a>
-        </div>
-        <div class="hero-types" aria-label="ობიექტის ტიპები">
-          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16M9 7h2M13 7h2M9 11h2M13 11h2M10 21v-4h4v4"/></svg>სასტუმრო</span>
-          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M4 21V9l8-6 8 6v12M9 21v-6h6v6"/></svg>აპარტჰოტელი</span>
-          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 21v-4h6v4M8 7h.01M12 7h.01M16 7h.01M8 11h.01M12 11h.01M16 11h.01"/></svg>აპარტამენტები</span>
-          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7M5 10v11h14V10M10 21v-5h4v5"/></svg>გესთ ჰაუსი</span>
-        </div>
-      </div>
-
-      <div class="mock" aria-hidden="true">
-        <div class="mock-window">
-          <div class="mock-top">
-            <img class="mark" src="assets/logo.svg" alt="">
-            <b>roomly</b>
-            <span class="search">სტუმარი, ჯავშანი, ოთახი…</span>
-          </div>
-          <div class="mock-tabs">
-            <span>დაფა</span><span class="on">კალენდარი</span><span>სტუმრები</span><span>დასუფთავება</span><span>ფასები და არხები</span><span>ფინანსები</span>
-          </div>
-          <div class="mock-body">
-            <div class="kpis">
-              <div class="kpi"><small>დღეს ჩამოსვლა</small><b>6</b></div>
-              <div class="kpi"><small>დღეს გასვლა</small><b>4</b></div>
-              <div class="kpi"><small>დაკავებულობა</small><b>78%</b></div>
-              <div class="kpi"><small>Overbooking</small><b class="ok">0</b></div>
+    <section style="padding: 64px 0 96px; overflow: hidden">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 32px)">
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 48px">
+          <div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; align-items: flex-start">
+            <div style="display: flex; flex-wrap: wrap; gap: 6px; font-size: 12px; font-weight: 500; color: #4A4843">
+              <span style="display: inline-flex; align-items: center; gap: 6px; background: #fff; border: 1px solid #E4E2DE; border-radius: 999px; padding: 4px 10px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#B81D24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16M9 7h2M13 7h2M9 11h2M13 11h2M10 21v-4h4v4"></path></svg>სასტუმრო</span>
+              <span style="display: inline-flex; align-items: center; gap: 6px; background: #fff; border: 1px solid #E4E2DE; border-radius: 999px; padding: 4px 10px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#B81D24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M4 21V9l8-6 8 6v12M9 21v-6h6v6"></path></svg>აპარტჰოტელი</span>
+              <span style="display: inline-flex; align-items: center; gap: 6px; background: #fff; border: 1px solid #E4E2DE; border-radius: 999px; padding: 4px 10px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#B81D24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"></rect><path d="M9 21v-4h6v4"></path></svg>აპარტამენტები</span>
+              <span style="display: inline-flex; align-items: center; gap: 6px; background: #fff; border: 1px solid #E4E2DE; border-radius: 999px; padding: 4px 10px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#B81D24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7M5 10v11h14V10M10 21v-5h4v5"></path></svg>გესთ ჰაუსი</span>
             </div>
-            <div class="tape">
-              <div class="tape-row tape-head">
-                <div>ოთახი</div><div class="today">12</div><div>13</div><div class="hol">14</div><div>15</div><div>16</div><div>17</div><div>18</div><div>19</div><div>20</div><div>21</div>
+            <h1 style="margin: 20px 0 16px; font-size: 46px; line-height: 1.12; font-weight: 700; letter-spacing: -0.02em">PMS, Channel Manager და AI — <span style="color: #B81D24">ერთ სისტემაში</span></h1>
+            <p style="margin: 0; font-size: 18px; color: #4A4843; max-width: 520px">ჯავშნები, არხები, სტუმრები და გუნდი — ერთი ეკრანიდან. AI კი პასუხობს 24/7.</p>
+            <span style="margin-top: 16px; display: inline-flex; align-items: center; gap: 8px; background: #1C1C1E; color: #fff; border-radius: 10px; padding: 8px 14px; font-size: 13px; font-weight: 500"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F07A7F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 12l2 2 4-4"></path></svg>MCP ინტეგრაცია — სისტემის მართვა შესაძლებელია დაცული AI აგენტებით</span>
+            <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px">
+              <a href="#contact" style="display: inline-flex; align-items: center; height: 48px; padding: 0 22px; border-radius: 8px; background: #B81D24; color: #fff; text-decoration: none; font-size: 15px; font-weight: 600">დემოს მოთხოვნა</a>
+              <a href="#product" style="display: inline-flex; align-items: center; height: 48px; padding: 0 22px; border-radius: 8px; background: #fff; border: 1px solid #D6D3CD; color: #1C1C1E; text-decoration: none; font-size: 15px; font-weight: 600">ნახეთ პროდუქტი</a>
+            </div>
+          </div>
+
+          <div class="hero-shot" style="flex: 1.35 1 520px; min-width: 0; position: relative">
+            <div style="background: #fff; border: 1px solid #E4E2DE; border-radius: 12px; overflow: hidden; box-shadow: 0 40px 80px -30px rgba(28,28,30,.35)">
+              <div style="height: 28px; background: #2C2C2E; display: flex; align-items: center; gap: 6px; padding: 0 12px">
+                <span style="width: 8px; height: 8px; border-radius: 50%; background: #55555A"></span><span style="width: 8px; height: 8px; border-radius: 50%; background: #55555A"></span><span style="width: 8px; height: 8px; border-radius: 50%; background: #55555A"></span>
+                <span style="margin-left: 10px; background: #1C1C1E; color: #8A867E; border-radius: 6px; padding: 1px 10px; font-size: 11px">app.roomly.ge</span>
               </div>
-              <div class="tape-row"><div class="tape-unit">A-101</div><div class="bar b" style="grid-column: 2 / 5">M. Schneider</div><div class="bar a" style="grid-column: 6 / 10">Ana K.</div><div class="bar b" style="grid-column: 10 / 12">J. Park</div></div>
-              <div class="tape-row"><div class="tape-unit">A-102</div><div class="bar b" style="grid-column: 3 / 8">O. Ivanova</div><div class="bar d" style="grid-column: 9 / 12">D. Levi</div></div>
-              <div class="tape-row"><div class="tape-unit">A-201</div><div class="bar b" style="grid-column: 2 / 7">Al-Mansouri</div><div class="bar a" style="grid-column: 8 / 12">T. Novak</div></div>
-              <div class="tape-row"><div class="tape-unit">A-202</div><div class="bar x" style="grid-column: 2 / 6">Out of Order</div><div class="bar b" style="grid-column: 7 / 12">K. Tanaka</div></div>
-              <div class="tape-row"><div class="tape-unit">B-204</div><div class="bar d" style="grid-column: 4 / 11">James Smith</div></div>
+              <img src="assets/screens/dashboard.png" alt="Roomly — Front Desk დაფა" width="1440" height="1000" style="display: block; width: 100%; height: auto">
             </div>
+            <div class="hero-phone" style="position: absolute; left: -36px; bottom: -44px; padding: 6px; background: #1C1C1E; border-radius: 28px; box-shadow: 0 30px 60px -20px rgba(28,28,30,.5)">
+                <div style="width: 176px; height: 380px; overflow: hidden; border-radius: 22px">
+                  <img src="assets/screens/cleaner.png" alt="Roomly — მობილური აპი" width="176" height="380" style="display: block; width: 176px; height: 380px">
+                </div>
+              </div>
+            
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="float-chat">
-          <header><b>AI კონსიერჟი · B-204</b><span class="pill pill-green"><span class="live"></span>AI პასუხობს</span></header>
-          <div class="msg in">Can you arrange a pickup from the airport at 03:40?<small>სტუმარი · WhatsApp</small></div>
-          <div class="msg out">Done — your transfer with a child seat is booked. The driver will meet you at arrivals.<small>AI კონსიერჟი</small></div>
-          <div class="sys">შეკვეთა შეიქმნა → მძღოლმა დაადასტურა</div>
+    <section id="sync" style="background: #141416; color: #fff; padding: 88px 0; overflow: hidden">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 32px)">
+        <div style="max-width: 760px; margin: 0 auto 48px; text-align: center; display: flex; flex-direction: column; gap: 12px; align-items: center">
+          <span style="font-size: 13px; font-weight: 700; color: #F07A7F; letter-spacing: .04em">ერთი სისტემა — ყველა არხი</span>
+          <h2 style="margin: 0; font-size: 40px; line-height: 1.2; font-weight: 700; letter-spacing: -0.015em">ყველა ჯავშანი და ყველა შეტყობინება — Roomly-ში</h2>
+          <p style="margin: 0; color: #B4B0A8; font-size: 16px">OTA-ებთან სინქრონი მიდის Channel Manager-ის გავლით: ფასი და ხელმისაწვდომობა ყველგან ერთად ახლდება.</p>
         </div>
+
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 12px; margin: -24px 0 24px; font-size: 13px; color: #8A867E">
+          <span>გადაათრიეთ ნებისმიერი ბლოკი — კავშირები მიჰყვება</span>
+          <button type="button" id="hub-reset" style="height: 36px; padding: 0 14px; border-radius: 999px; border: 1px solid #3A3A3C; background: transparent; color: #D6D3CD; font: inherit; font-size: 13px; cursor: pointer">↺ თავდაპირველი განლაგება</button>
+        </div>
+        <div id="hub-wrap" style="height: 760px; overflow: hidden">
+          <div id="hub" style="position: relative; width: 1136px; height: 760px; transform-origin: 0 0">
+
+            <svg width="1136" height="760" viewBox="0 0 1136 760" aria-hidden="true" style="position: absolute; left: 0; top: 0; overflow: visible; fill: none; stroke-width: 2; stroke-linecap: round; pointer-events: none">
+              <path class="flow" data-path="wa" d="M104 58 C320 58 320 330 536 330" stroke="#25D366"></path>
+              <path class="flow" data-path="ig" d="M224 113 C380 113 380 330 536 330" stroke="#E1306C"></path>
+              <path class="flow" data-path="ms" d="M104 168 C320 168 320 330 536 330" stroke="#3D8BFF"></path>
+              <path class="flow" data-path="tg" d="M224 223 C380 223 380 330 536 330" stroke="#2AABEE"></path>
+              <path class="flow" data-path="ph" d="M104 278 C320 278 320 330 536 330" stroke="#6B83F0"></path>
+              <path class="flow" data-path="em" d="M224 333 C380 333 380 330 536 330" stroke="#9A8CF0"></path>
+              <path class="flow" data-path="gm" d="M104 388 C320 388 320 330 536 330" stroke="#F2A93B"></path>
+              <path class="flow" data-path="bk" d="M104 528 C202 528 202 592 300 592" stroke="#4C7BD9"></path>
+              <path class="flow" data-path="ab" d="M224 528 C264 528 260 592 300 592" stroke="#FF6B70"></path>
+              <path class="flow" data-path="ex" d="M104 638 C202 638 202 592 300 592" stroke="#F5C443"></path>
+              <path class="flow" data-path="tr" d="M224 638 C264 638 260 592 300 592" stroke="#3D8BFF"></path>
+              <path class="flow" data-path="cx" d="M468 592 C508 592 496 372 536 372" stroke="#F07A7F" style="stroke-width: 3"></path>
+              <path class="flow" data-path="pms" d="M664 330 C812 330 812 52 960 52" stroke="#F07A7F"></path>
+              <path class="flow" data-path="crm" d="M664 330 C812 330 812 134 960 134" stroke="#F07A7F"></path>
+              <path class="flow" data-path="ai" d="M664 330 C812 330 812 216 960 216" stroke="#F07A7F"></path>
+              <path class="flow" data-path="web" d="M664 330 C812 330 812 298 960 298" stroke="#F07A7F"></path>
+              <path class="flow" data-path="pay" d="M664 330 C812 330 812 380 960 380" stroke="#F07A7F"></path>
+              <path class="flow" data-path="rep" d="M664 330 C812 330 812 462 960 462" stroke="#F07A7F"></path>
+              <path class="flow" data-path="sms" d="M664 330 C812 330 812 544 960 544" stroke="#F07A7F"></path>
+              <path class="flow" data-path="sci" d="M664 330 C812 330 812 626 960 626" stroke="#F07A7F"></path>
+              <path class="flow" data-path="key" d="M664 330 C812 330 812 708 960 708" stroke="#F07A7F"></path>
+            </svg>
+
+            <div style="position: absolute; left: 48px; top: 0; font-size: 11px; font-weight: 700; color: #8A867E; letter-spacing: .06em">სტუმრის არხები</div>
+            <div style="position: absolute; left: 48px; top: 470px; font-size: 11px; font-weight: 700; color: #8A867E; letter-spacing: .06em">OTA არხები</div>
+            <div style="position: absolute; left: 960px; top: 0; font-size: 11px; font-weight: 700; color: #8A867E; letter-spacing: .06em">ROOMLY-ს შიგნით</div>
+
+            <div data-node="rm" style="position: absolute; left: 500px; top: 266px; width: 200px; display: flex; flex-direction: column; align-items: center; gap: 14px; cursor: grab; touch-action: none; user-select: none">
+              <div style="position: absolute; left: -120px; top: -156px; width: 440px; height: 440px; border-radius: 50%; background: rgba(184,29,36,.10); pointer-events: none"></div>
+              <div style="position: absolute; left: -50px; top: -86px; width: 300px; height: 300px; border-radius: 50%; background: rgba(184,29,36,.18); pointer-events: none"></div>
+              <div style="position: relative; width: 128px; height: 128px; border-radius: 30px; background: #fff; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 8px rgba(255,255,255,.06), 0 20px 50px rgba(184,29,36,.45)"><img src="assets/roomly-mark.svg" alt="Roomly" style="width: 104px; height: 104px"></div>
+              <img src="assets/roomly-wordmark-light.svg" alt="Roomly" style="position: relative; height: 40px; width: auto">
+            </div>
+
+            <div data-node="wa" style="position: absolute; left: 26px; top: 30px; width: 100px; display: flex; flex-direction: column; align-items: center; gap: 4px; cursor: grab; touch-action: none; user-select: none"><div style="width: 56px; height: 56px; border-radius: 14px; background: #25D366; display: flex; align-items: center; justify-content: center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l1.9-5.7A8.5 8.5 0 1 1 21 11.5z"></path><path d="M9 9.5c.5 2 2 3.5 4 4l1.2-1.2 2 1-.5 1.7c-3.5 0-7-3.5-7-7l1.7-.5 1 2z"></path></svg></div><span style="font-size: 11px; color: #D6D3CD">WhatsApp</span></div>
+            <div data-node="ig" style="position: absolute; left: 146px; top: 85px; width: 100px; display: flex; flex-direction: column; align-items: center; gap: 4px; cursor: grab; touch-action: none; user-select: none"><div style="width: 56px; height: 56px; border-radius: 14px; background: #C13584; display: flex; align-items: center; justify-content: center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><path d="M17.5 6.5h.01"></path></svg></div><span style="font-size: 11px; color: #D6D3CD">Instagram</span></div>
+            <div data-node="ms" style="position: absolute; left: 26px; top: 140px; width: 100px; display: flex; flex-direction: column; align-items: center; gap: 4px; cursor: grab; touch-action: none; user-select: none"><div style="width: 56px; height: 56px; border-radius: 14px; background: #0A7CFF; display: flex; align-items: center; justify-content: center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2C6.5 2 2 6.1 2 11.2c0 2.9 1.4 5.4 3.7 7.1V22l3.4-1.9c.9.3 1.9.4 2.9.4 5.5 0 10-4.1 10-9.2S17.5 2 12 2z"></path><path d="M7 13l3-3 3 2 4-4"></path></svg></div><span style="font-size: 11px; color: #D6D3CD">Messenger</span></div>
+            <div data-node="tg" style="position: absolute; left: 146px; top: 195px; width: 100px; display: flex; flex-direction: column; align-items: center; gap: 4px; cursor: grab; touch-action: none; user-select: none"><div style="width: 56px; height: 56px; border-radius: 14px; background: #229ED9; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"></path></svg></div><span style="font-size: 11px; color: #D6D3CD">Telegram</span></div>
+            <div data-node="ph" style="position: absolute; left: 26px; top: 250px; width: 100px; display: flex; flex-direction: column; align-items: center; gap: 4px; cursor: grab; touch-action: none; user-select: none"><div style="width: 56px; height: 56px; border-radius: 14px; background: #3B5BDB; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"></path></svg></div><span style="font-size: 11px; color: #D6D3CD">ტელეფონი</span></div>
+            <div data-node="em" style="position: absolute; left: 146px; top: 305px; width: 100px; display: flex; flex-direction: column; align-items: center; gap: 4px; cursor: grab; touch-action: none; user-select: none"><div style="width: 56px; height: 56px; border-radius: 14px; background: #7C6FE0; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="M22 6l-10 7L2 6"></path></svg></div><span style="font-size: 11px; color: #D6D3CD">Email</span></div>
+            <div data-node="gm" style="position: absolute; left: 26px; top: 360px; width: 100px; display: flex; flex-direction: column; align-items: center; gap: 4px; cursor: grab; touch-action: none; user-select: none"><div style="width: 56px; height: 56px; border-radius: 14px; background: #fff; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#EA4335" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div><span style="font-size: 11px; color: #D6D3CD">Google Maps</span></div>
+
+            <div data-node="bk" style="position: absolute; left: 26px; top: 500px; width: 100px; display: flex; flex-direction: column; align-items: center; gap: 4px; cursor: grab; touch-action: none; user-select: none"><div style="width: 56px; height: 56px; border-radius: 14px; background: #003580; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4v16M2 8h18a2 2 0 0 1 2 2v10M2 17h20M6 8v9"></path></svg></div><span style="font-size: 11px; color: #D6D3CD">Booking.com</span></div>
+            <div data-node="ab" style="position: absolute; left: 146px; top: 500px; width: 100px; display: flex; flex-direction: column; align-items: center; gap: 4px; cursor: grab; touch-action: none; user-select: none"><div style="width: 56px; height: 56px; border-radius: 14px; background: #FF5A5F; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7M5 10v11h14V10M10 21v-5h4v5"></path></svg></div><span style="font-size: 11px; color: #D6D3CD">Airbnb</span></div>
+            <div data-node="ex" style="position: absolute; left: 26px; top: 610px; width: 100px; display: flex; flex-direction: column; align-items: center; gap: 4px; cursor: grab; touch-action: none; user-select: none"><div style="width: 56px; height: 56px; border-radius: 14px; background: #FFC72C; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1C1C1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"></path></svg></div><span style="font-size: 11px; color: #D6D3CD">Expedia</span></div>
+            <div data-node="tr" style="position: absolute; left: 146px; top: 610px; width: 100px; display: flex; flex-direction: column; align-items: center; gap: 4px; cursor: grab; touch-action: none; user-select: none"><div style="width: 56px; height: 56px; border-radius: 14px; background: #287DFA; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"></path></svg></div><span style="font-size: 11px; color: #D6D3CD">Trip.com</span></div>
+
+            <div data-node="cx" style="position: absolute; left: 300px; top: 556px; width: 168px; height: 72px; box-sizing: border-box; border-radius: 14px; background: #26262A; border: 1px solid #F07A7F; display: flex; align-items: center; gap: 10px; padding: 0 14px; cursor: grab; touch-action: none; user-select: none"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F07A7F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 1l4 4-4 4"></path><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"></path><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg><span style="display: flex; flex-direction: column; line-height: 1.3"><b style="font-size: 14px">Channex</b><span style="font-size: 11px; color: #B4B0A8">Channel Manager</span></span></div>
+
+            <div data-node="pms" style="position: absolute; left: 960px; top: 24px; width: 176px; display: flex; align-items: center; gap: 12px; cursor: grab; touch-action: none; user-select: none"><div style="flex: none; width: 56px; height: 56px; border-radius: 14px; background: #B81D24; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg></div><span style="display: flex; flex-direction: column; line-height: 1.3"><b style="font-size: 14px">PMS</b><span style="font-size: 11px; color: #8A867E">ჯავშნები, ოთახები</span></span></div>
+            <div data-node="crm" style="position: absolute; left: 960px; top: 106px; width: 176px; display: flex; align-items: center; gap: 12px; cursor: grab; touch-action: none; user-select: none"><div style="flex: none; width: 56px; height: 56px; border-radius: 14px; background: #B81D24; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"></path></svg></div><span style="display: flex; flex-direction: column; line-height: 1.3"><b style="font-size: 14px">CRM</b><span style="font-size: 11px; color: #8A867E">სტუმრის პროფილი</span></span></div>
+            <div data-node="ai" style="position: absolute; left: 960px; top: 188px; width: 176px; display: flex; align-items: center; gap: 12px; cursor: grab; touch-action: none; user-select: none"><div style="flex: none; width: 56px; height: 56px; border-radius: 14px; background: #B81D24; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.8L20 10l-6.1 1.2L12 17l-1.9-5.8L4 10l6.1-1.2z"></path><path d="M19 17l.7 2.3L22 20l-2.3.7L19 23l-.7-2.3L16 20l2.3-.7z"></path></svg></div><span style="display: flex; flex-direction: column; line-height: 1.3"><b style="font-size: 14px">AI აგენტები</b><span style="font-size: 11px; color: #8A867E">რესეფშენი, კონსიერჟი</span></span></div>
+            <div data-node="web" style="position: absolute; left: 960px; top: 270px; width: 176px; display: flex; align-items: center; gap: 12px; cursor: grab; touch-action: none; user-select: none"><div style="flex: none; width: 56px; height: 56px; border-radius: 14px; background: #B81D24; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"></rect><path d="M8 21h8M12 17v4"></path></svg></div><span style="display: flex; flex-direction: column; line-height: 1.3"><b style="font-size: 14px">ვებ-გვერდი</b><span style="font-size: 11px; color: #8A867E">Booking Engine</span></span></div>
+            <div data-node="pay" style="position: absolute; left: 960px; top: 352px; width: 176px; display: flex; align-items: center; gap: 12px; cursor: grab; touch-action: none; user-select: none"><div style="flex: none; width: 56px; height: 56px; border-radius: 14px; background: #B81D24; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"></rect><path d="M2 10h20"></path></svg></div><span style="display: flex; flex-direction: column; line-height: 1.3"><b style="font-size: 14px">გადახდები</b><span style="font-size: 11px; color: #8A867E">BOG · TBC · Keepz</span></span></div>
+            <div data-node="rep" style="position: absolute; left: 960px; top: 434px; width: 176px; display: flex; align-items: center; gap: 12px; cursor: grab; touch-action: none; user-select: none"><div style="flex: none; width: 56px; height: 56px; border-radius: 14px; background: #B81D24; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"></path><path d="M7 15l4-4 3 3 5-6"></path></svg></div><span style="display: flex; flex-direction: column; line-height: 1.3"><b style="font-size: 14px">რეპორტები</b><span style="font-size: 11px; color: #8A867E">Night audit, BI</span></span></div>
+            <div data-node="sms" style="position: absolute; left: 960px; top: 516px; width: 176px; display: flex; align-items: center; gap: 12px; cursor: grab; touch-action: none; user-select: none"><div style="flex: none; width: 56px; height: 56px; border-radius: 14px; background: #B81D24; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path><path d="M7 8h10M7 12h6"></path></svg></div><span style="display: flex; flex-direction: column; line-height: 1.3"><b style="font-size: 14px">Email და SMS</b><span style="font-size: 11px; color: #8A867E">ავტო-შეტყობინებები</span></span></div>
+            <div data-node="sci" style="position: absolute; left: 960px; top: 598px; width: 176px; display: flex; align-items: center; gap: 12px; cursor: grab; touch-action: none; user-select: none"><div style="flex: none; width: 56px; height: 56px; border-radius: 14px; background: #B81D24; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="3" width="7" height="7" rx="1"></rect><rect x="3" y="14" width="7" height="7" rx="1"></rect><path d="M14 14h3v3h-3zM20 14v.01M14 20h.01M17 20h4v-3"></path></svg></div><span style="display: flex; flex-direction: column; line-height: 1.3"><b style="font-size: 14px">Self check-in</b><span style="font-size: 11px; color: #8A867E">ონლაინ, QR-ით</span></span></div>
+            <div data-node="key" style="position: absolute; left: 960px; top: 680px; width: 176px; display: flex; align-items: center; gap: 12px; cursor: grab; touch-action: none; user-select: none"><div style="flex: none; width: 56px; height: 56px; border-radius: 14px; background: #B81D24; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7.5" cy="15.5" r="4.5"></circle><path d="M10.7 12.3L21 2M16 7l3 3M18 5l2 2"></path></svg></div><span style="display: flex; flex-direction: column; line-height: 1.3"><b style="font-size: 14px">Key ბარათები</b><span style="font-size: 11px; color: #8A867E">Smart lock, კოდები</span></span></div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="product" style="padding: 88px 0">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 32px); display: flex; flex-direction: column; gap: 28px">
+        <div style="display: flex; flex-direction: column; gap: 12px; align-items: center; text-align: center">
+          <span style="font-size: 13px; font-weight: 700; color: #B81D24; letter-spacing: .04em">პროდუქტი</span>
+          <h2 style="margin: 0; font-size: 40px; line-height: 1.2; font-weight: 700; letter-spacing: -0.015em">ასე გამოიყურება Roomly</h2>
+        </div>
+        <div role="tablist" aria-label="ეკრანები" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px">
+          <button role="tab" type="button" aria-selected="true" data-tab="cal" data-caption="ყველა შენობა და არხი ერთ კალენდარში — overbooking-ის გარეშე." style="height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid #1C1C1E; background: #1C1C1E; color: #FFFFFF; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer">კალენდარი</button>
+          <button role="tab" type="button" aria-selected="false" data-tab="con" data-caption="AI პასუხობს სტუმრებს WhatsApp-ში და თავად ქმნის შეკვეთებს." style="height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid #D6D3CD; background: #FFFFFF; color: #1C1C1E; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer">AI კონსიერჟი</button>
+          <button role="tab" type="button" aria-selected="false" data-tab="rat" data-caption="კონკურენტების ფასები და რეკომენდაციები ერთი დაჭერით." style="height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid #D6D3CD; background: #FFFFFF; color: #1C1C1E; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer">ფასები</button>
+          <button role="tab" type="button" aria-selected="false" data-tab="rev" data-caption="ყველა შეფასება ერთ სივრცეში, AI-ის პასუხის მონახაზით." style="height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid #D6D3CD; background: #FFFFFF; color: #1C1C1E; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer">Review-ები</button>
+          <button role="tab" type="button" aria-selected="false" data-tab="hk" data-caption="დამლაგებლების განაწილება და ოთახების სტატუსი რეალურ დროში." style="height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid #D6D3CD; background: #FFFFFF; color: #1C1C1E; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer">დასუფთავება</button>
+        </div>
+        <p id="tab-caption" style="margin: 0; text-align: center; color: #4A4843; font-size: 16px">ყველა შენობა და არხი ერთ კალენდარში — overbooking-ის გარეშე.</p>
+        <div style="background: #fff; border: 1px solid #E4E2DE; border-radius: 14px; overflow: hidden; box-shadow: 0 30px 70px -30px rgba(28,28,30,.3)">
+          <div style="height: 36px; background: #2C2C2E; display: flex; align-items: center; gap: 8px; padding: 0 14px">
+            <span style="width: 10px; height: 10px; border-radius: 50%; background: #55555A"></span><span style="width: 10px; height: 10px; border-radius: 50%; background: #55555A"></span><span style="width: 10px; height: 10px; border-radius: 50%; background: #55555A"></span>
+            <span style="margin-left: 12px; background: #1C1C1E; color: #8A867E; border-radius: 6px; padding: 2px 12px; font-size: 12px">app.roomly.ge</span>
+          </div>
+          <img data-shot="cal" src="assets/screens/calendar.png" alt="Roomly — კალენდარი" width="1440" height="880" loading="lazy" style="display: block; width: 100%; height: auto"><img data-shot="con" src="assets/screens/concierge.png" alt="Roomly — AI კონსიერჟი" width="1440" height="880" loading="lazy" style="display: none; width: 100%; height: auto"><img data-shot="rat" src="assets/screens/rates.png" alt="Roomly — ფასები" width="1440" height="880" loading="lazy" style="display: none; width: 100%; height: auto"><img data-shot="rev" src="assets/screens/reviews.png" alt="Roomly — Review-ები" width="1440" height="880" loading="lazy" style="display: none; width: 100%; height: auto"><img data-shot="hk" src="assets/screens/housekeeping.png" alt="Roomly — დასუფთავება" width="1440" height="880" loading="lazy" style="display: none; width: 100%; height: auto">
+        </div>
+      </div>
+    </section>
+
+    <section id="ai" style="padding: 88px 0; background: #fff; border-top: 1px solid #E4E2DE; border-bottom: 1px solid #E4E2DE">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 32px); display: flex; flex-direction: column; gap: 40px">
+        <div style="display: flex; flex-direction: column; gap: 12px; align-items: center; text-align: center">
+          <span style="font-size: 13px; font-weight: 700; color: #B81D24; letter-spacing: .04em">AI გუნდი</span>
+          <h2 style="margin: 0; font-size: 30px; line-height: 1.25; font-weight: 700; letter-spacing: -0.01em">ასისტენტი, რომელიც 24/7 ეხმარება თქვენს გუნდს</h2>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px">
+          <div style="background: #F6F5F3; border: 1px solid #E4E2DE; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 10px">
+            <span style="width: 44px; height: 44px; border-radius: 10px; background: #1C1C1E; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18h18M5 18a7 7 0 0 1 14 0M12 8v3M10 8h4"></path><path d="M2 21h20"></path></svg></span>
+            <h3 style="margin: 0; font-size: 18px">AI რესეფშენი</h3>
+            <p style="margin: 0; color: #6B6862; font-size: 14px">პასუხობს, ამოწმებს თარიღებს და ქმნის ჯავშანს.</p>
+          </div>
+          <div style="background: #F6F5F3; border: 1px solid #E4E2DE; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 10px">
+            <span style="width: 44px; height: 44px; border-radius: 10px; background: #1C1C1E; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path><path d="M8 9h8M8 13h5"></path></svg></span>
+            <h3 style="margin: 0; font-size: 18px">AI კონსიერჟი</h3>
+            <p style="margin: 0; color: #6B6862; font-size: 14px">ტრანსფერები, სერვისები და პასუხები ნებისმიერ ენაზე.</p>
+          </div>
+          <div style="background: #F6F5F3; border: 1px solid #E4E2DE; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 10px">
+            <span style="width: 44px; height: 44px; border-radius: 10px; background: #1C1C1E; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"></path><path d="M14 7h7v7"></path></svg></span>
+            <h3 style="margin: 0; font-size: 18px">AI გაყიდვები</h3>
+            <p style="margin: 0; color: #6B6862; font-size: 14px">მოთხოვნიდან პირდაპირ ჯავშნამდე, საკომისიოს გარეშე.</p>
+          </div>
+          <div style="background: #F6F5F3; border: 1px solid #E4E2DE; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 10px">
+            <span style="width: 44px; height: 44px; border-radius: 10px; background: #1C1C1E; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></span>
+            <h3 style="margin: 0; font-size: 18px">AI ფასები</h3>
+            <p style="margin: 0; color: #6B6862; font-size: 14px">კონკურენტების ფასები და რეკომენდაციები.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="apps" style="padding: 88px 0">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 32px); display: flex; flex-direction: column; gap: 40px">
+        <div style="display: flex; flex-direction: column; gap: 12px; align-items: center; text-align: center">
+          <span style="font-size: 13px; font-weight: 700; color: #B81D24; letter-spacing: .04em">მობილური აპები</span>
+          <h2 style="margin: 0; font-size: 40px; line-height: 1.2; font-weight: 700; letter-spacing: -0.015em">გუნდი და სტუმარი — ტელეფონში</h2>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px">
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 14px">
+            <div style="padding: 8px; background: #1C1C1E; border-radius: 36px"><div style="width: 234px; height: 506px; overflow: hidden; border-radius: 28px"><img src="assets/screens/cleaner.png" alt="დამლაგებლის აპი" width="234" height="506" loading="lazy" style="display: block; width: 234px; height: 506px"></div></div>
+            <b style="font-size: 16px">დამლაგებლის აპი</b>
+          </div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 14px">
+            <div style="padding: 8px; background: #1C1C1E; border-radius: 36px"><div style="width: 234px; height: 506px; overflow: hidden; border-radius: 28px"><img src="assets/screens/engineer.png" alt="ტექნიკოსის აპი" width="234" height="506" loading="lazy" style="display: block; width: 234px; height: 506px"></div></div>
+            <b style="font-size: 16px">ტექნიკოსის აპი</b>
+          </div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 14px">
+            <div style="padding: 8px; background: #1C1C1E; border-radius: 36px"><div style="width: 234px; height: 506px; overflow: hidden; border-radius: 28px"><img src="assets/screens/guestqr.png" alt="სტუმრის QR გვერდი" width="234" height="506" loading="lazy" style="display: block; width: 234px; height: 506px"></div></div>
+            <b style="font-size: 16px">სტუმრის QR გვერდი</b>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="background: #1C1C1E; color: #fff; padding: 88px 0">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 32px); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 32px">
+        <div style="flex: 1 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
+          <h2 style="margin: 0; font-size: 42px; line-height: 1.2; letter-spacing: -0.015em">გაუშვით ობიექტი Roomly-ზე</h2>
+          <p style="margin: 0; color: #D6D3CD; font-size: 17px">გაჩვენებთ სისტემას თქვენი ობიექტის მაგალითზე.</p>
+        </div>
+        <a href="tel:+995322441111" style="display: inline-flex; align-items: center; gap: 10px; height: 48px; padding: 0 22px; border-radius: 8px; background: #B81D24; color: #fff; text-decoration: none; font-size: 15px; font-weight: 600"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"></path><path d="M15 3a6 6 0 0 1 6 6M15 7a2 2 0 0 1 2 2"></path></svg>032 2 44 11 11</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer style="background: #1C1C1E; color: #B4B0A8; border-top: 1px solid #2C2C2E; padding: 56px 0 28px; font-size: 14px">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 32px); display: flex; flex-direction: column; gap: 40px">
+      <div style="display: flex; flex-wrap: wrap; gap: 40px">
+        <div style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 14px">
+          <a href="#top" aria-label="Roomly" style="display: flex; align-items: center; gap: 12px; color: #fff; text-decoration: none"><img src="assets/roomly-logo-light.svg" alt="Roomly" style="height: 48px; width: auto"></a>
+          <span style="max-width: 260px; line-height: 1.5">PMS, Channel Manager და AI — სასტუმროებისა და აპარტამენტებისთვის.</span>
+        </div>
+        <div style="flex: 1 1 240px; display: flex; flex-direction: column; gap: 10px">
+          <b style="color: #fff; font-size: 15px">კონტაქტი</b>
+          <a href="mailto:info@roomly.ge" style="color: #D6D3CD; text-decoration: none">info@roomly.ge</a>
+          <a href="tel:+995322441111" style="color: #D6D3CD; text-decoration: none">032 2 44 11 11</a>
+          <span style="line-height: 1.5">ჭავჭავაძის გამზირი 37მ, მე-5 სართული, თბილისი</span>
+        </div>
+        <div style="flex: 1.4 1 320px; height: 220px; border-radius: 12px; overflow: hidden; border: 1px solid #3A3A3C"><iframe title="რუკა — ჭავჭავაძის გამზირი 37მ" src="https://www.google.com/maps?q=%E1%83%AD%E1%83%90%E1%83%95%E1%83%AD%E1%83%90%E1%83%95%E1%83%90%E1%83%AB%E1%83%98%E1%83%A1%20%E1%83%92%E1%83%90%E1%83%9B%E1%83%96%E1%83%98%E1%83%A0%E1%83%98%2037%E1%83%9B%2C%20%E1%83%97%E1%83%91%E1%83%98%E1%83%9A%E1%83%98%E1%83%A1%E1%83%98&amp;z=16&amp;output=embed" width="100%" height="100%" style="border: 0; display: block" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; border-top: 1px solid #2C2C2E; padding-top: 20px; font-size: 13px; color: #8A867E">
+        <span>© 2026 Roomly</span>
+        <a href="https://itconnect.ge" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 10px; color: #8A867E; text-decoration: none">პროექტის შემქმნელი<img src="assets/itconnect-logo.png" alt="ITConnect" style="height: 22px; width: auto; border-radius: 3px"></a>
       </div>
     </div>
-  </section>
+  </footer>
 
-  <!-- AI team -->
-  <section class="block alt" id="ai">
-    <div class="container">
-      <div class="section-head">
-        <span class="kicker">AI გუნდი</span>
-        <h2>ციფრული თანამშრომლები, რომლებიც არასდროს იძინებენ</h2>
-        <p>თითოეული AI აგენტი პირდაპირ PMS-ის მონაცემებით მუშაობს — ჯავშნებით, ოთახებით, ფასებით და თქვენი ცოდნის ბაზით. როცა საკითხი საჩივარს, თანხის დაბრუნებას ან უცნობ კითხვას ეხება, საუბარი ადამიანს გადაეცემა.</p>
-      </div>
-      <div class="agents">
-        <article class="agent">
-          <div class="top">
-            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1v-6h3zM3 19a2 2 0 0 0 2 2h1v-6H3z"/></svg></span>
-            <span class="pill pill-green"><span class="live"></span>24/7</span>
-          </div>
-          <h3>AI რესეფშენი</h3>
-          <p>პასუხობს ზარებსა და შეტყობინებებს, ამოწმებს ხელმისაწვდომობას და ქმნის ჯავშანს პირდაპირ კალენდარში.</p>
-          <ul>
-            <li>ონლაინ check-in და დოკუმენტების მიღება</li>
-            <li>გვიანი გასვლა, ოთახის შეცვლა, ექსტრა საწოლი</li>
-            <li>ავტომატური შეტყობინებები ჩამოსვლამდე და შემდეგ</li>
-          </ul>
-        </article>
-        <article class="agent">
-          <div class="top">
-            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/></svg></span>
-            <span class="pill pill-gray">WhatsApp · ჩატი</span>
-          </div>
-          <h3>AI კონსიერჟი</h3>
-          <p>სტუმრის ნებისმიერ ენაზე ეხმარება ბინადრობის განმავლობაში და თავად ქმნის შეკვეთებს სერვისებზე.</p>
-          <ul>
-            <li>ტრანსფერები, ტურები, რესტორნის რეკომენდაციები</li>
-            <li>ტექნიკური პრობლემა → დავალება ტექნიკოსს</li>
-            <li>სტუმრის QR გვერდი ოთახში</li>
-          </ul>
-        </article>
-        <article class="agent">
-          <div class="top">
-            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></span>
-            <span class="pill pill-red">გაყიდვები</span>
-          </div>
-          <h3>AI გაყიდვების აგენტი</h3>
-          <p>ამუშავებს შემოსულ მოთხოვნებს, ამზადებს შეთავაზებას და მიჰყავს სტუმარი პირდაპირ ჯავშნამდე — საკომისიოს გარეშე.</p>
-          <ul>
-            <li>ჯგუფური და კორპორატიული მოთხოვნები</li>
-            <li>Upsell: ოთახის გაუმჯობესება, საუზმე, ტრანსფერი</li>
-            <li>მიტოვებული მოთხოვნების follow-up</li>
-          </ul>
-        </article>
-        <article class="agent">
-          <div class="top">
-            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
-            <span class="pill pill-amber">Revenue</span>
-          </div>
-          <h3>AI ფასების მენეჯერი</h3>
-          <p>ადევნებს თვალს კონკურენტების ფასებს, დღესასწაულებსა და ღონისძიებებს, და გთავაზობთ ფასის ცვლილებას დასადასტურებლად.</p>
-          <ul>
-            <li>კონკურენტების ფასები თქვენს უბანში</li>
-            <li>სეზონები, ტარიფები და შეზღუდვები</li>
-            <li>OTA საკომისიოების ანალიზი</li>
-          </ul>
-        </article>
-        <article class="agent">
-          <div class="top">
-            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg></span>
-            <span class="pill pill-gray">Review-ები</span>
-          </div>
-          <h3>AI Review მენეჯერი</h3>
-          <p>ყველა პლატფორმის შეფასება ერთ სივრცეში — AI ამზადებს პასუხის მონახაზს თქვენი ტონით და აჩვენებს განმეორებად პრობლემებს.</p>
-          <ul>
-            <li>პასუხის მონახაზი ერთი დაჭერით</li>
-            <li>უარყოფითი review → დავალება გუნდს</li>
-          </ul>
-        </article>
-        <article class="agent">
-          <div class="top">
-            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M9 9h6v6H9zM9 2v2M15 2v2M9 20v2M15 20v2M20 9h2M20 15h2M2 9h2M2 15h2"/></svg></span>
-            <span class="pill pill-gray">MCP · API</span>
-          </div>
-          <h3>თქვენი საკუთარი AI</h3>
-          <p>Roomly ღიაა MCP-ით და API-ით — დააკავშირეთ თქვენი AI ასისტენტი ან სისტემა და მართეთ სასტუმრო ჩვეულებრივი ენით.</p>
-          <ul>
-            <li>„რამდენი ჩამოსვლაა ხვალ?“ — პასუხი წამებში</li>
-            <li>უსაფრთხო წვდომა როლების მიხედვით</li>
-          </ul>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Concierge showcase -->
-  <section class="block">
-    <div class="container showcase">
-      <div>
-        <div class="section-head" style="margin-bottom: 0">
-          <span class="kicker">AI კონსიერჟი მოქმედებაში</span>
-          <h2>საუბრიდან შესრულებულ შეკვეთამდე — ადამიანის ჩარევის გარეშე</h2>
-        </div>
-        <ol class="steps">
-          <li><div><b>სტუმარი წერს WhatsApp-ში</b><span>ნებისმიერ ენაზე, დღის ნებისმიერ დროს.</span></div></li>
-          <li><div><b>AI ამოწმებს ჯავშანს და ცოდნის ბაზას</b><span>ოთახი, თარიღები, ფასები, თქვენი წესები.</span></div></li>
-          <li><div><b>ქმნის შეკვეთას და აგზავნის შემსრულებელთან</b><span>მძღოლი, დამლაგებელი ან ტექნიკოსი იღებს დავალებას აპში.</span></div></li>
-          <li><div><b>თქვენ ხედავთ ყველაფერს ერთ inbox-ში</b><span>და ნებისმიერ დროს შეგიძლიათ საუბარი აიღოთ.</span></div></li>
-        </ol>
-      </div>
-
-      <div class="chat-demo" aria-label="AI კონსიერჟის საუბრის მაგალითი">
-        <div class="head">
-          <div><b>James Smith · B-204</b><small>WhatsApp · ინგლისური · ჩამოსვლა 14 ოქტ</small></div>
-          <span class="pill pill-green"><span class="live"></span>AI პასუხობს</span>
-        </div>
-        <div class="body">
-          <div class="msg in">Hi! We land at Tbilisi airport on Oct 14 at 03:40. Can you arrange a pickup to the apartment?<small>სტუმარი · 11:02</small></div>
-          <div class="msg out">Of course! Could you share your flight number, how many passengers, and whether you need a child seat?<small>AI კონსიერჟი · 11:02</small></div>
-          <div class="msg in">2 adults and 1 child — yes please, a child seat.<small>სტუმარი · 11:04</small></div>
-          <div class="msg out">Done. Your transfer is booked for Oct 14, 03:40, with a child seat. Your driver will meet you at arrivals with a name sign.<small>AI კონსიერჟი · 11:05</small></div>
-          <div class="sys">შეკვეთა #T-0142 შეიქმნა → გაეგზავნა მძღოლს · დადასტურდა 11:09</div>
-        </div>
-        <div class="order">
-          <div><small>სერვისი</small>აეროპორტის ტრანსფერი</div>
-          <div><small>თარიღი</small>14 ოქტ, 03:40</div>
-          <div><small>მგზავრები</small>2 + 1 ბავშვი</div>
-          <div><small>სტატუსი</small><span><span class="pill pill-green">დადასტურდა</span></span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Property types -->
-  <section class="block alt" id="types">
-    <div class="container">
-      <div class="section-head">
-        <span class="kicker">ვისთვის</span>
-        <h2>ერთი სისტემა — ნებისმიერი ზომის ობიექტისთვის</h2>
-        <p>დაიწყეთ რამდენიმე ოთახით ან მართეთ რამდენიმე შენობა ერთი ანგარიშიდან.</p>
-      </div>
-      <div class="types">
-        <div class="type-card">
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16M9 7h2M13 7h2M9 11h2M13 11h2M10 21v-4h4v4"/></svg></span>
-          <h3>სასტუმროები</h3>
-          <p>Front desk, night audit, ჯგუფები და პროფილები, რეპორტები და დეპარტამენტებს შორის დავალებები.</p>
-        </div>
-        <div class="type-card">
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M4 21V9l8-6 8 6v12M9 21v-6h6v6"/></svg></span>
-          <h3>აპარტჰოტელები</h3>
-          <p>რამდენიმე შენობა ერთ კალენდარში, გრძელვადიანი ბინადრობა და დასუფთავების ინტერვალები.</p>
-        </div>
-        <div class="type-card">
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 21v-4h6v4M8 7h.01M12 7h.01M16 7h.01M8 11h.01M12 11h.01M16 11h.01"/></svg></span>
-          <h3>აპარტამენტები</h3>
-          <p>უკონტაქტო check-in, smart lock, Booking და Airbnb სინქრონი overbooking-ის გარეშე.</p>
-        </div>
-        <div class="type-card">
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7M5 10v11h14V10M10 21v-5h4v5"/></svg></span>
-          <h3>გესთ ჰაუსები</h3>
-          <p>მარტივი დაწყება, AI რესეფშენი თქვენს ნაცვლად და მობილური მართვა ტელეფონიდან.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Modules -->
-  <section class="block" id="modules">
-    <div class="container">
-      <div class="section-head">
-        <span class="kicker">მოდულები</span>
-        <h2>ყველაფერი, რაც ობიექტის მართვას სჭირდება</h2>
-      </div>
-      <div class="modules">
-        <div class="module">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-          <h3>კალენდარი და ჯავშნები</h3>
-          <p>Tape chart ყველა შენობით, ჯავშნის ბარათი, დღესასწაულები და ღონისძიებები.</p>
-        </div>
-        <div class="module">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
-          <h3>Channel Manager</h3>
-          <p>Booking.com, Airbnb, Trip.com — Rate Code-ები, მეპინგი და overbooking-ისგან დაცვა.</p>
-        </div>
-        <div class="module">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z"/></svg>
-          <h3>Front Desk დაფა</h3>
-          <p>დღის მიმოხილვა: შემოსვლები, გასვლები, დაკავებულობა და ყველაფერი, რაც ყურადღებას ითხოვს.</p>
-        </div>
-        <div class="module">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l6-6M14 4l6 6-8 8-6-6z"/><path d="M12 6l6 6"/></svg>
-          <h3>დასუფთავება</h3>
-          <p>დღის გეგმა, დამლაგებლების განაწილება, გრაფიკი, ანაზღაურება და თეთრეულის მარაგი.</p>
-        </div>
-        <div class="module">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94z"/></svg>
-          <h3>Maintenance და IT</h3>
-          <p>საინჟინრო და IT დავალებები SLA-ით, გეგმიური პროფილაქტიკა, Out of Order ოთახები.</p>
-        </div>
-        <div class="module">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
-          <h3>ფინანსები</h3>
-          <p>ჩარიცხვები და ბილინგი, ქართული ბანკების ინტეგრაცია, OTA საკომისიოები.</p>
-        </div>
-        <div class="module">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg>
-          <h3>რეპორტები და Night audit</h3>
-          <p>Flash რეპორტი, Emergency სია, დღის დახურვა და დაკავებულობის წლიური ჭრილი.</p>
-        </div>
-        <div class="module">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          <h3>სტუმრები და ჯგუფები</h3>
-          <p>Guest in house, პროფილები, ჯგუფები და ვირტუალური ოთახები.</p>
-        </div>
-        <div class="module">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3h6v6H3zM15 3h6v6h-6zM3 15h6v6H3z"/><path d="M15 15h2v2h-2zM19 19h2v2h-2zM15 19h2v2h-2zM19 15h2v2h-2z"/></svg>
-          <h3>სერვისები და ტრანსფერები</h3>
-          <p>სტუმრის QR გვერდი, სერვისების კატალოგი და შეკვეთები მძღოლებთან და პარტნიორებთან.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Mobile apps -->
-  <section class="block alt" id="apps">
-    <div class="container">
-      <div class="section-head">
-        <span class="kicker">მობილური აპები</span>
-        <h2>გუნდი და სტუმარი — ერთ სისტემაში</h2>
-        <p>დავალებები ავტომატურად ხვდება სწორ ადამიანთან, სტატუსები კი რეალურ დროში ჩანს დაფაზე.</p>
-      </div>
-      <div class="apps">
-        <div class="phone">
-          <div class="scr" aria-hidden="true">
-            <b>დღეს · 7 ოთახი</b>
-            <div class="row"><b>A-101</b><span class="pill pill-red">გასვლა</span></div>
-            <div class="row"><b>A-302</b><span class="pill pill-amber">მიმდინარე</span></div>
-            <div class="row"><b>B-102</b><span class="pill pill-green">მზადაა</span></div>
-          </div>
-          <h3>დამლაგებლის აპი</h3>
-          <p>დღის ოთახები, პრიორიტეტები და სტატუსის შეცვლა ერთი შეხებით.</p>
-        </div>
-        <div class="phone">
-          <div class="scr" aria-hidden="true">
-            <b>ღია დავალებები · 3</b>
-            <div class="row"><b>A-202 · ცხელი წყალი</b><span class="pill pill-red">SLA 1სთ</span></div>
-            <div class="row"><b>B-204 · Wi-Fi</b><span class="pill pill-amber">გზაში</span></div>
-            <div class="row"><b>A-101 · ფილტრი</b><span class="pill pill-gray">გეგმიური</span></div>
-          </div>
-          <h3>ტექნიკოსის აპი</h3>
-          <p>საინჟინრო და IT დავალებები, ფოტოები, SLA და დასრულების დადასტურება.</p>
-        </div>
-        <div class="phone">
-          <div class="scr" aria-hidden="true">
-            <b>მოგესალმებით, James</b>
-            <div class="row"><b>Wi-Fi</b><span class="pill pill-gray">დაკოპირება</span></div>
-            <div class="row"><b>ტრანსფერის შეკვეთა</b><span class="pill pill-red">შეკვეთა</span></div>
-            <div class="row"><b>ჩატი კონსიერჟთან</b><span class="pill pill-green">AI ონლაინ</span></div>
-          </div>
-          <h3>სტუმრის QR გვერდი</h3>
-          <p>ინსტალაციის გარეშე: ინფორმაცია, სერვისები და AI კონსიერჟი სტუმრის ტელეფონში.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Integrations -->
-  <section class="block" id="integrations">
-    <div class="container">
-      <div class="section-head">
-        <span class="kicker">ინტეგრაციები</span>
-        <h2>მუშაობს იმ სერვისებთან, რომლებსაც უკვე იყენებთ</h2>
-      </div>
-      <div class="integrations">
-        <span>Booking.com</span>
-        <span>Airbnb</span>
-        <span>Trip.com</span>
-        <span>Channex</span>
-        <span>WhatsApp</span>
-        <span>საქართველოს ბანკი</span>
-        <span>თიბისი ბანკი</span>
-        <span>MCP</span>
-        <span>REST API</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta" id="contact">
-    <div class="container">
-      <div>
-        <h2>გაუშვით თქვენი ობიექტი Roomly-ზე</h2>
-        <p>მოგვწერეთ — გაჩვენებთ სისტემას თქვენი ობიექტის მაგალითზე და დაგეხმარებით Booking-ისა და Airbnb-ის დაკავშირებაში.</p>
-      </div>
-      <div class="cta-actions">
-        <a class="btn btn-primary" href="mailto:hello@roomly.ge?subject=Roomly%20%E2%80%94%20%E1%83%93%E1%83%94%E1%83%9B%E1%83%9D">hello@roomly.ge</a>
-        <a class="btn btn-dark" href="#ai">AI გუნდის ნახვა</a>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer class="site-footer">
-  <div class="container">
-    <a class="brand" href="#top"><img class="brand-mark" src="assets/logo.svg" alt="" width="24" height="24" style="width:24px;height:24px"><span class="brand-name" style="font-size:15px">roomly<span>.ge</span></span></a>
-    <div class="links">
-      <a href="#ai">AI გუნდი</a>
-      <a href="#modules">მოდულები</a>
-      <a href="#integrations">ინტეგრაციები</a>
-      <a href="mailto:hello@roomly.ge">კონტაქტი</a>
-    </div>
-    <span>© <span id="y">2026</span> Roomly</span>
-  </div>
-</footer>
-
-<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</div>
+<script src="assets/site.js" defer></script>
 </body>
 </html>
